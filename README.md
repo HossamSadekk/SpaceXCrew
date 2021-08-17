@@ -3,6 +3,7 @@
 ## Used Components:-
 - Java
 - MVVM
+- Room
 - Rxjava
 - RecyclerView
 - AlertDialog
