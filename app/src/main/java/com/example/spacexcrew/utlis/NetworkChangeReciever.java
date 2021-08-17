@@ -23,24 +23,8 @@ public class NetworkChangeReciever extends BroadcastReceiver {
         crewListener = (CrewListener) context;
         if(!CheckInternet.isConnectedToInternet(context))
         {
-           /* AlertDialog.Builder builder = new AlertDialog.Builder(context);
-            checkInternetDialogBinding = DataBindingUtil.inflate(LayoutInflater.from(context),
-                    R.layout.check_internet_dialog,null,false);
-
-            builder.setView(checkInternetDialogBinding.getRoot());
-            dialog = builder.create();
-            checkInternetDialogBinding.refreshBtn.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
-                    crewListener.refreshBtn();
-                    dialog.dismiss();
-                }
-            });
-            dialog.show();*/
            crewListener.disconnected();
             Toast.makeText(context,"You Are Offline",Toast.LENGTH_LONG).show();
-
-
         }
         else
             {
